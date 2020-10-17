@@ -1,0 +1,11 @@
+{
+  "name": "auto-publish-package",
+  "version": "0.1.0",
+  "description": "A tool to automatically publish a new version of a package",
+  "main": "index.js",
+  "author": "Mike Kreiser",
+  "license": "MIT",
+  "bin": {
+    "auto-publish-package": "./index.js"
+  }
+}
