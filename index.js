@@ -33,6 +33,6 @@ const hasExistingVersion = (name, version) => getExistingVersions(name).includes
 
   console.log(`${name}@${version} has not been published. Publishing...`);
 
-  const { usePublic } = parseArgs(process.argv.slice(2), { boolean: ['use-public'] });
-  execSync(`npm publish ${usePublic ? '--access public' : ''}`);
+  const args = parseArgs(process.argv.slice(2), { boolean: ['use-public'] });
+  execSync(`npm publish ${args['use-public'] ? '--access public' : ''}`);
 })();
