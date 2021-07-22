@@ -1,6 +1,6 @@
 # auto-publish-package
 
-A simple, dependency-free tool to automatically publish an npm package if the latest version has not been published already. This is very useful for CI/CD.
+A simple, lightweight tool to automatically publish an npm package if the latest version has not been published already. This is very useful for CI/CD.
 
 This tool assumes:
 

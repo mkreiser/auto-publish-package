@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 const { execSync } = require('child_process');
+const parseArgs = require('minimist');
 const path = require('path');
 
 const getExistingVersions = (name) => {
@@ -31,5 +32,7 @@ const hasExistingVersion = (name, version) => getExistingVersions(name).includes
   }
 
   console.log(`${name}@${version} has not been published. Publishing...`);
-  execSync('npm publish');
+
+  const { usePublic } = parseArgs(process.argv.slice(2), { boolean: ['use-public'] });
+  execSync(`npm publish ${usePublic ? '--access public' : ''}`);
 })();
