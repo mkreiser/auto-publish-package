@@ -28,7 +28,7 @@ const hasExistingVersion = (name, version) => getExistingVersions(name).includes
 
   if (hasExistingVersion(name, version)) {
     console.log(`${name}@${version} has already been published.`);
-    process.exit(1);
+    process.exit(0);
   }
 
   console.log(`${name}@${version} has not been published. Publishing...`);
